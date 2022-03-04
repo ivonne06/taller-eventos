@@ -6,7 +6,7 @@
    public $fecha="";
    public $descripcion="";
 
-   /* function __construct($titulo,$fecha,$descripcion){
+    /* function __construct($titulo,$fecha,$descripcion){
       $this -> titulo=$titulo;
       $this -> fecha=$fecha;
       $this -> descripcion=$descripcion;
@@ -40,8 +40,10 @@
        return $this ->descripcion;
     }
 
-   
 
+    public function __toString(){
+      return "Titulo: ".$this->titulo." Fecha: ".$this->fecha." Descripcion: ".$this->descripcion;
+    }
  }
 
 ?>
