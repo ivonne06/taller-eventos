@@ -2,7 +2,7 @@
 
  class Eventos
  {
-   //public static $idevento = 0;
+   public static $idevento = 0;
    public $titulo="";
    public $fecha="";
    public $descrip="";
@@ -10,7 +10,7 @@
 
 
     function __construct($titulo="",$fecha="",$descrip=""){
-      //self::$idevento++;
+      self::$idevento++;
       $this -> titulo=$titulo;
       $this -> fecha=$fecha;
       $this -> descrip=$descrip;
@@ -43,19 +43,17 @@
        return $this ->descrip;
     }
 
-
-    public function __toString(){
-      return "Titulo: ".$this->titulo." Fecha: ".$this->fecha." Descripcion: ".$this->descrip;
-    }
-
     public function Guardar_Datos(){
-      $lista["titulo"]= $this->titulo;
-      $lista["fecha"]= $this->fecha;
-      $lista["descripcion"]= $this->descrip;
-      array_push($lista);
+      $this -> lista["idevento"]=self::$idevento;
+      $this -> lista["titulo"]= $this->titulo;
+      $this -> lista["fecha"]= $this->fecha;
+      $this -> lista["descripcion"]= $this->descrip;
+      
+      array_push($this -> lista);
 
-      return $lista;
+      return $this -> lista;
     }
+
  }
 
 ?>
