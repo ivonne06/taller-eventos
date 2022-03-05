@@ -39,11 +39,7 @@ if ($_POST) {
 </head>
 <body>
 	<section id="login">
-		<!-- <header>
-			<h2>Login</h2>
-		</header> -->
 
-		
 		<form method="post" action="login.php">
 			
 			<h1 class="animate__animated animate__backInLeft">Iniciar sesion</h1>
@@ -57,12 +53,12 @@ if ($_POST) {
 		</form>
 
 		<?php
-				if (isset($_GET["error"]) and $_GET["error"] == 1){
-			?>
+			if (isset($_GET["error"]) and $_GET["error"] == 1){
+		?>
 			<h3>Error al intentar iniciar sesión</h3>
-			<?php
-                }
-			?>
+		<?php
+            }
+		?>
 	</section>
 </body>
 </html>
