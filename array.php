@@ -51,9 +51,9 @@ function __autoload($classname){
 
  ?>
  
- <a href="http://localhost/taller_main/index.php"><input type="submit" name="" value="Regresar"></a>
- <a href="http://localhost/taller_main/array.php"><input type="submit" name="" value="Borrar todo">
+ <a href="index.php"><input type="submit" name="" value="Regresar"></a>
+ <a href="array.php"><input type="submit" name="" value="Borrar todo">
     </a>
-    <a href="http://localhost/taller_main/login.php"><input type="submit" name="" value="cerrar sesion"></a>
+    <a href="login.php"><input type="submit" name="" value="cerrar sesion"></a>
  </body>
  </html>
