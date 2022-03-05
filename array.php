@@ -16,9 +16,10 @@
 function __autoload($classname){
     require "class/" . $classname . ".class.php";
 }
- session_start();
 
- if(isset($_POST['agregar'])){
+session_start();
+
+if(isset($_POST['agregar'])){
     if ($_POST) {
         $titulo = isset($_POST["titulo"]) ? $_POST["titulo"] : '';
         $fecha = isset($_POST["fecha"]) ? $_POST["fecha"] : '';
@@ -31,33 +32,35 @@ function __autoload($classname){
         }else{
             $valores=array();
         }
+        $salto=" <br>";
+        $p="<p>";
+        $p1="</p>";
 
+        $arreglo1 = [''=> $p,'Titulo' => $titulo, 'Fecha' => $fecha, 'Descripcion' => $descripcion,''=>$p1,'' => $salto];
 
-        foreach($event as $key => $value){
-            array_push($valores, $value );
+        foreach($arreglo1 as $val => $value){
+            array_push($valores, $val." : ".$value);          
         }
-
 
         $_SESSION['data']=$valores;
 
         //$ListaEventos = $event->Guardar_Datos();
         
         foreach($valores as $val => $valor2 ){
-        echo $valor2."  ";
+            echo $valor2."  ";
         }
-        echo "<br>";
 
+        echo "<br>";          
     }           
 }
-
-$Usuario = new Usuario();
-$nombre = $Usuario->getNombre();
- ?>
+?>
  
- <a class="btn btn-secondary" href="index.php?usuario=" . $nombre role="button">Regresar</a>
+ <a class="btn btn-secondary" href="index.php?usuario=" role="button">Regresar</a>
  <a class="btn btn-danger" href="array.php" role="button">Borrar</a>
  <a class="btn btn-secondary" href="login.php" role="button">Cerrar Sesion</a> 
  
     
  </body>
  </html>
+ 
+ <?php //unset($_SESSION['data']);?>
