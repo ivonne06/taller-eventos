@@ -49,13 +49,14 @@ function __autoload($classname){
 
     }           
 }
+
 $Usuario = new Usuario();
 $nombre = $Usuario->getNombre();
  ?>
  
- <div><a href="index.php?usuario=" . $nombre>Regresar</a></div>
- <div><a href="array.php">Borrar</a></div>
- <div><a href="login.php">Cerrar Sesion</a></div>
+ <a class="btn btn-secondary" href="index.php?usuario=" . $nombre role="button">Regresar</a>
+ <a class="btn btn-danger" href="array.php" role="button">Borrar</a>
+ <a class="btn btn-secondary" href="login.php" role="button">Cerrar Sesion</a> 
  
     
  </body>

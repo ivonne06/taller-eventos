@@ -43,7 +43,7 @@
        return $this ->descrip;
     }
 
-    public function Guardar_Datos(){
+    /* public function Guardar_Datos(){
       $this -> lista["idevento"]=self::$idevento;
       $this -> lista["titulo"]= $this->titulo;
       $this -> lista["fecha"]= $this->fecha;
@@ -52,7 +52,7 @@
       array_push($this -> lista,"");
 
       return $this -> lista;
-    }
+    } */
 
  }
 

@@ -22,21 +22,15 @@ if(!isset($nombre)){
 	<meta charset="utf-8">
 	<title>Agenda</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <form action="array.php" method="POST" class="formulario__login"  name="form1" id="form">
-                        
+    <form action="array.php" method="POST" class="formulario__login"  name="form1" id="form">              
         <input type="text" name="titulo" placeholder="Titulo del evento">
         <input type="date" id="fecha" name="fecha" value="" min="" max="">
         <input type="text" name="descripcion" placeholder="descripcion">
         <input type="submit" name="agregar" value="guardar evento">
         <input type="hidden" name="valores" value="<?php echo implode(",",$_SESSION['data'])?>">
-
-        
-        
-        <!-- <a href="index.html" id="return"><input type="submit" name="" value="regresar" id="ret"></a> -->
     </form>     
     
     <?php
