@@ -3,13 +3,13 @@
  class Eventos
  {
    public static $idevento = 0;
-   public $titulo="";
-   public $fecha="";
-   public $descrip="";
-   public $lista = array();
+   public $titulo;
+   public $fecha;
+   public $descrip;
+   
 
 
-    function __construct($titulo="",$fecha="",$descrip=""){
+    function __construct($titulo,$fecha,$descrip){
       self::$idevento++;
       $this -> titulo=$titulo;
       $this -> fecha=$fecha;
@@ -49,7 +49,7 @@
       $this -> lista["fecha"]= $this->fecha;
       $this -> lista["descripcion"]= $this->descrip;
       
-      array_push($this -> lista);
+      array_push($this -> lista,"");
 
       return $this -> lista;
     }
