@@ -30,24 +30,23 @@ if ($_POST) {
 <head>
 	<meta charset="utf-8" />
 	<title>Login</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 	<!--[if lt IE 9]>
        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
 <body>
 	<section id="login">
-		<header>
+		<!-- <header>
 			<h2>Login</h2>
-		</header>
+		</header> -->
+
+		
 		<form method="post" action="login.php">
-			<?php
-				if (isset($_GET["error"]) and $_GET["error"] == 1){
-			?>
-			<h3>Error al intentar iniciar sesión</h3>
-			<?php
-                }
-			?>
+			
+			<h1 class="animate__animated animate__backInLeft">Iniciar sesion</h1>
 			<dl>
 				<dt><label for="nombre">Nombre:</label></dt>
 				<dd><input type="text" name="nombre" value=""></dd><br>
@@ -56,6 +55,14 @@ if ($_POST) {
 			</dl>
 			<input type="submit" value="Login">
 		</form>
+
+		<?php
+				if (isset($_GET["error"]) and $_GET["error"] == 1){
+			?>
+			<h3>Error al intentar iniciar sesión</h3>
+			<?php
+                }
+			?>
 	</section>
 </body>
 </html>
